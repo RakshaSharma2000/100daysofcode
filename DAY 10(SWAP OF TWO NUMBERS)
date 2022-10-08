@@ -1,0 +1,28 @@
+QUESTION : SWAPPING OF TWO NUMBERS WITHOUT USING THIRD VARIABLES
+CODE SOLUTION :
+import java.util.*;
+ class Swap{
+    static void swapValuesWithoutUsingThirdVariable(int m,
+                                                    int n)
+    {
+        m = m - n;
+        n = m + n;
+        m = n - m;
+ System.out.println("Value of m is " + m
+                           + " and Value of n is " + n);
+    }
+    public static void main(String[]Value of m is 5 and Value of n is 9
+ args)
+    {
+        int m = 9, n = 5;
+        swapValuesWithoutUsingThirdVariable(m, n);
+    }
+}
+output:
+Value of m is 5 and Value of n is 9
+
+DESCRIPTION:
+We can swap two numbers without using third variable. There are two common ways to swap two numbers without using third variable:
+
+By + and -
+By * and /
