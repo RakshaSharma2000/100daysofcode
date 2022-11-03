@@ -10,8 +10,8 @@ for(i = 1; i <= num; ++i)
 {  
 sum = sum + i;  
 }  
-System.out.println("Sum of First 10 Natural Numbers is = " + sum);  
+System.out.println("Sum of First 20 Natural Numbers is = " + sum);  
 }  
 }
 OUTPUT:
-Sum of First 10 Natural Numbers is = 210
+Sum of First 20 Natural Numbers is = 210
