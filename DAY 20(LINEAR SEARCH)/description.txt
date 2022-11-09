@@ -1,0 +1,33 @@
+LINEAR SEARCH 
+By using two methods , we can linearly search in java program :
+1.) Using Array
+2.)Using Recursion 
+USING ARRAY 
+1) We are searching the key in the array.
+
+2) Read the array length and store the value into the variable len, read the elements using the Scanner class method and store the elements into the array array[].
+
+3) Read the key value and search for that key in the array.
+
+4) Run the for loop
+
+ 
+
+for i = 0 to  i < length of the array.
+compare array[i] with the key, If any one of the elements of an array is equal to the key then print the key and position of the key.
+
+
+Using Recursion
+1) Read the array length len, store array elements in to the array array[] using Scanner class method.
+
+2) Read the key value and call recursionSearch(array,0,len-1,key) of RecursionExample3 class.
+
+3) RecursionSearch(int arr[], int start, int last, int x)
+
+returns -1 value if last<start.
+Compare the element at the index “start” of the array with the key, if both are equal, returns the index value.
+if key not equal to the that element call recursionSerach(arr,start+1,last,x) by increasing the start value.
+4)  This method returns the index value. If index !=-1, then prints key is found at the location index+1 otherwise, prints “key not available”.
+
+
+
