@@ -1,5 +1,6 @@
 QUESTION OF THE DAY :
 To check whether the numbers is neon or not?
+
 Code solution :
 import java.util.*;  
 public class NeonNumberExample 
