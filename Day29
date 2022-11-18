@@ -1,0 +1,26 @@
+QUESTION OF THE DAY:
+Java Program to Demonstrate Method Overloading
+CODE SOLUTION:
+import java.io.*;
+ class Student {
+	public void StudentId(String name, int roll_no)
+	{
+			System.out.println("Name :" + name + " " + "Roll-No :" + roll_no);
+	}
+	public void StudentId(int roll_no, String name)
+	{
+		System.out.println("Roll-No :" + roll_no + " " + "Name :" + name);
+	}
+}
+public class Student1 {
+
+	public static void main(String[] args)
+	{
+		Student obj = new Student();
+		obj.StudentId("Raksha", 54);
+		obj.StudentId(154, "Shrey Srivastava");
+	}
+}
+CODE OUTPUT:
+Name :Raksha Roll-No :54
+Roll-No :154 Name :Shrey Srivastava
