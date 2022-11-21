@@ -1,0 +1,41 @@
+QUESTION OF THE DAY:
+Java Program to find the frequency of each element in the array.
+DESCRIPTION:
+In the following , we have an array numbers. In this array there are elements that reappeared again and we need to count the frequency of each element.
+
+We ran a nested for loop(loop inside loop), in such a way that the each element of an array is compared to the all the elements of the same array, 
+and every time there is a match, we increase the value of the count variable that counts the frequency.
+
+Since, elements appeared multiple times, we need to avoid counting the frequency of same element again.
+For this, we have assigned a -1 value to the already counted elements using counted variable.
+
+In the end, elements and their frequency in the array is displayed,
+here also we are using the counted variable to avoid printing the frequency of same element again.
+CODE SOLUTION:public class Frequency{
+  public static void main(String[] args) {
+    int [] numbers = new int [] {2, 2, 3, 4, 5, 5, 5, 3, 2, 4};
+    int [] frequency = new int [numbers.length];
+    int counted = -1;
+    for(int i = 0; i < numbers.length; i++){
+      int count = 1;
+      for(int j = i+1; j < numbers.length; j++){
+        if(numbers[i] == numbers[j]){
+          count++;
+          frequency[j] = counted;
+        }
+      }
+      if(frequency[i] != counted)
+        frequency[i] = count;
+    }
+    for(int i = 0; i < frequency.length; i++){
+      if(frequency[i] != counted)
+        System.out.println("Element: "+numbers[i] + " Frequency: " + frequency[i]);
+    }
+  }
+}
+CODE OUTPUT:
+Element: 2 Frequency: 3
+Element: 3 Frequency: 2
+Element: 4 Frequency: 2
+Element: 5 Frequency: 3
+
