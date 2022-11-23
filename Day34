@@ -1,0 +1,29 @@
+QUESTION OF THE DAY:
+Use  of throws  keyword in exception handling.
+DESCRIPTION:
+When we run this program, if the file test.txt does not exist,
+FileInputStream throws a FileNotFoundException which extends the IOException class.
+
+If a method does not handle exceptions, the type of exceptions that may occur within it must be specified in the throws clause
+so that methods further up in the call stack can handle them or specify them using throws keyword themselves.
+
+The findFile() method specifies that an IOException can be thrown.
+The main() method calls this method and handles the exception if it is thrown.
+CODE SOLUTION:
+import java.io.*;
+public class Main {
+  public static void findFile() throws IOException {
+    File newFile=new File("test.txt");
+    FileInputStream stream=new FileInputStream(newFile);
+  }
+
+  public static void main(String[] args) {
+    try{
+      findFile();
+    } catch(IOException e){
+      System.out.println(e);
+    }
+  }
+}
+CODE OUTPUT:
+java.io.FileNotFoundException: test.txt (No such file or directory)
