@@ -1,0 +1,66 @@
+QUESTION OF THE DAY:
+Enter code of day and Print Name of the day
+DESCRIPTION:
+The objective of a switch statement is to give an expression to evaluate and several different statements to execute based on the value of the expression.
+The interpreter checks each case against the value of the expression until a match is found. If nothing matches, a default condition will be used.
+switch (expression) {
+   case condition 1: statement(s)
+   break;
+   case condition 2: statement(s)
+   break;
+   ...
+   
+   case condition n: statement(s)
+   break;
+   
+   default: statement(s)
+}
+The break statements indicate the end of a particular case.
+
+CODE SOLUTION:
+package Raksha;
+import java.util.Scanner;
+public class Weekend {
+    public static void main(String[] args) {
+        int n;
+        System.out.print("enter code of day");
+        Scanner r = new Scanner(System.in);
+        n = r.nextInt();
+        switch(n)
+            {
+                case 0:
+                System.out.print("Sunday");
+                break;
+                case 1:
+                System.out.println("Monday");
+                break;
+                case 2:
+                System.out.println("Tuesday");
+                break;
+                case 3:
+                System.out.println("Wednesday");
+                break;
+                case 4:
+                System.out.println("Thursday");
+                break;
+                case 5:
+                System.out.println("Friday");
+                break;
+                case 6:
+                System.out.println("Saturday");
+                break;
+                default:
+                System.out.println("invalid code");
+                break;
+            }
+        }
+    }
+    CODE OUTPUT:
+    enter code of day
+4
+Thursday
+
+Process finished with exit code 0
+
+
+
