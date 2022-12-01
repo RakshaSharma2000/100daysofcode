@@ -1,0 +1,30 @@
+QUESTION OF THE DAY:
+Create JComboBox using Swings.
+DESCRIPTION:
+JComboBox is a part of Java Swing package. JComboBox inherits JComponent class . JComboBox shows a popup menu 
+that shows a list and the user can select a option from that specified list . JComboBox can be editable or read- only depending on the choice of the programmer .
+Constructor of the JComboBox are: 
+JComboBox() : creates a new empty JComboBox .
+JComboBox(ComboBoxModel M) : creates a new JComboBox with items from specified ComboBoxModel
+JComboBox(E [ ] i) : creates a new JComboBox with items from specified array.
+JComboBox(Vector items) : creates a new JComboBox with items from the specified vector
+SOURCE CODE:
+package Raksha;
+import javax.swing.*;
+
+public class SwingsJCombobox {
+        JFrame f;
+        SwingsJCombobox(){
+            f=new JFrame("ComboBox Example");
+            String country[]={"India","Brazil","U.S.A","Africa","Switzerland"};
+            JComboBox cb=new JComboBox(country);
+            cb.setBounds(50, 50,90,20);
+            f.add(cb);
+            f.setLayout(null);
+            f.setSize(400,500);
+            f.setVisible(true);
+        }
+        public static void main(String[] args) {
+            new SwingsJCombobox();
+        }
+    }
