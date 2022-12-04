@@ -1,0 +1,44 @@
+QUESTION OF THE DAY:
+Java Program to right rotate the elements of an array.
+DESCRIPTION:
+In this program, we need to rotate the elements of array towards its right by the specified number of times.
+An array is said to be right rotated if all elements of the array are moved to its right by one position.
+One approach is to loop through the array by shifting each element of the array to its next position.
+The last element of the array will become the first element of the rotated array.
+
+Consider the above array, if n is 1 then, all elements of the array will be moved to its right by one position that is the first element 
+of the array will take the second position, the second element will be moved to the third position and so on. 
+The last element of the array will become the first element of the array.
+
+CODE SOLUTION:
+package Raksha;
+
+public class Rightrotate {
+    public static void main(String[] args) {
+        int [] arr = new int [] {1, 2, 3, 4, 5};
+        int n = 3;
+        System.out.println("Original array: ");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        for(int i = 0; i < n; i++){
+            int j, last;
+            last = arr[arr.length-1];
+
+            for(j = arr.length-1; j > 0; j--) {
+                arr[j] = arr[j - 1];
+            }
+            arr[0] = last;
+        }
+        System.out.println();
+        System.out.println("Array after right rotation: ");
+        for(int i = 0; i< arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+CODE OUTPUT:
+Original Array:
+1   2   3   4   5
+Array after right rotation:
+3   4   5   1   2
