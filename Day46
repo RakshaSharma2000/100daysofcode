@@ -1,0 +1,30 @@
+QUESTION OF THE DAY:
+Write a Java program to find the Sum and Average of Array Elements.
+DESCRIPTION:
+In the above example, we have created an array of named numbers. We have used the for...each loop to access each element of the array.
+Inside the loop, we are calculating the sum of each element. Notice the line,
+int arrayLength = number.length;
+Here, we are using the length attribute of the array to calculate the size of the array. We then calculate the average using:
+average = ((double)sum / (double)arrayLength);
+As you can see, we are converting the int value into double. This is called type casting in Java.
+CODE SOLUTION:
+ public class Arrayavg {
+ public static void main(String[] args) {
+
+   int[] numbers = {2, -9, 0, 5, 12, -25, 22, 9, 8, 12};
+   int sum = 0;
+   Double average;
+   for (int number: numbers) {
+     sum += number;
+   }
+  
+   int arrayLength = numbers.length;
+   average =  ((double)sum / (double)arrayLength);
+
+   System.out.println("Sum = " + sum);
+   System.out.println("Average = " + average);
+ }
+}
+CODE OUTPUT:
+Sum = 36
+Average = 3.6
