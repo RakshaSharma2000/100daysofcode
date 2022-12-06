@@ -1,0 +1,44 @@
+QUESTION OF THE DAY:
+Java Program to Compare Elements in a Collection.
+APPROACH:
+Take inputs in the list.
+Create two variables, minimum and maximum.
+Use Collections.min() method and store the return value in min variable.
+Use Collections.max() method and store the return value in max variable.
+If the minimum and maximum variables are equal then print Equal elements.
+Else print minimum and maximum variables.
+CODE SOLUTION:
+import java.util.*;
+
+public class Collectioncompare {
+    public static void main(String[] args)
+        {
+            // List initialization
+            List<Integer> l = new ArrayList<>();
+
+            // Add elements in the list
+            l.add(3);
+            l.add(5);
+            l.add(18);
+            l.add(4);
+            l.add(6);
+            // Minimum in the list
+            int minimum = Collections.min(l);
+            // Maximum in the list
+            int maximum = Collections.max(l);
+            if (minimum == maximum) {
+                System.out.println("All elements are equal");
+            }
+            else {
+                System.out.println("Min value of our list : "
+                        + minimum);
+                System.out.println("Max value of our list : "
+                        + maximum);
+            }
+        }
+    }
+    CODE OUTPUT:
+Min value of our list : 3
+Max value of our list : 18
+
+Process finished with exit code 0
