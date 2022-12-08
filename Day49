@@ -1,0 +1,42 @@
+QUESTION OF THE DAY:
+Java program to illustrate reverse() method of Collections class over ArrayList.
+DESCRIPTION:
+reverse() method of Collections class as the name itself suggests is used for reversing elements been there up in the object in which they are stored. 
+It reverses the order of elements in a list passed as an argument.
+
+This class is present in java.util package so do syntax is as follows:
+
+import java.util.Collections;
+Collections.reverse(class_obj);
+
+CODE SOLUTION:
+import java.util.*;
+
+// Main class
+public class Collection {
+
+	// main driver method
+	public static void main(String[] args)
+	{
+		// Let us create a list of strings
+		List<String> mylist = new ArrayList<String>();
+
+		// Adding elements to the List
+		// Custom input elements
+		mylist.add("have");
+		mylist.add("a");
+		mylist.add("good");
+		mylist.add("day");
+
+		// Print all elements originally
+		System.out.println("Original List : " + mylist);
+
+		Collections.reverse(mylist);
+
+		System.out.println("Modified List: " + mylist);
+	}
+}
+CODE OUTPUT:
+Original List : [have, a, good, day]
+Modified List: [day, good, a, have]
+
