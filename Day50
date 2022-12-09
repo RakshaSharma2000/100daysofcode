@@ -1,0 +1,37 @@
+QUESTION OF THE DAY:
+Java Program to determine whether a given matrix is a sparse matrix.
+DESCRIPTION:
+In this program, we need to check whether the given matrix is a sparse matrix.
+
+A matrix is said to be sparse matrix if most of the elements of that matrix are 0. It implies that it contains very less non-zero elements.
+
+To check whether the given matrix is the sparse matrix or not, we first count the number of zero elements present in the matrix. 
+Then calculate the size of the matrix. For the matrix to be sparse, count of zero elements present in an array must be greater than size/2.
+CODE SOLUTION:
+public class SparseMatrix    
+{    
+    public static void main(String[] args) {    
+        int rows, cols, size, count = 0;    
+        int a[][] = {       
+                        {4, 0, 0},    
+                        {0, 5, 0},    
+                        {0, 0, 6}    
+                    };    
+          rows = a.length;    
+        cols = a[0].length;    
+        size = rows * cols;    
+        for(int i = 0; i < rows; i++){    
+            for(int j = 0; j < cols; j++){    
+                if(a[i][j] == 0)    
+                    count++;    
+                }    
+            }    
+                
+        if(count > (size/2))    
+            System.out.println("Given matrix is a sparse matrix");    
+        else    
+            System.out.println("Given matrix is not a sparse matrix");    
+    }    
+}     
+CODE OUTPUT:
+Given matrix is a sparse matrix.
