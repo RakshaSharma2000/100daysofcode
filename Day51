@@ -1,0 +1,35 @@
+QUESTION OF THE DAY:
+Find the missing number in the array.
+DESCRIPTION :
+Find the sum of the numbers in the range [1, N] using the formula total_num*((total_num +1) / 2). 
+Now find the sum of all the elements in the array and subtract it from the sum of the first N natural numbers. 
+This will give the value of the missing element.
+Follow the steps mentioned below to implement the idea:
+
+Calculate the sum of the first N natural numbers as total_num*((total_num +1) / 2)
+Traverse the array from start to end.
+Find the sum of all the array elements.
+Print the missing number as(expected_num_sum – num_sum)
+CODE SOLUTION:
+package Raksha;
+import java.util.*;
+
+public class Missingnumber {
+
+        public static void main(String[] args) {
+
+            int total_num;
+            int[] numbers = new int[]{1,2,3,4,6,7};
+            total_num = 7;
+            int expected_num_sum = total_num * ((total_num + 1) / 2);
+            int num_sum = 0;
+            for (int i: numbers) {
+                num_sum += i;
+            }
+            System.out.print( expected_num_sum - num_sum);
+            System.out.print("\n");
+        }
+    }
+ CODE OUTPUT:
+  5
+  
