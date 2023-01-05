@@ -1,0 +1,37 @@
+QUESTION OF THE DAY:
+Java BigInteger
+Description:
+In this problem, we have to add and multiply huge numbers! These numbers are so big that you can't contain them in any ordinary data types like a long integer.
+we can use the power of Java's BigInteger class and solve this problem.
+CODE SOLUTION:
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        BigInteger a = new BigInteger((scan.next()));
+        BigInteger b = new BigInteger((scan.next()));
+        System.out.println(a.add(b));
+        System.out.println(a.multiply(b));
+    }
+}
+TEST CASES:
+CASE 1:
+Input 
+1234
+20
+Output 
+1254
+24680
+CASE 2:
+Input 
+123456789123456789
+100000000000000000
+Your Output 
+223456789123456789
+12345678912345678900000000000000000
