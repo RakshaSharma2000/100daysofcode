@@ -1,0 +1,33 @@
+QUESTION OF THE DAY:
+Java String Tokens
+CODE SOLUTION:
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        
+        scan.close();
+        String[] words = s.split("[^a-zA-Z]+");
+        System.out.println(words.length);
+        for(String word : words)
+        System.out.println(word);
+    }
+}
+Input 
+He is a very very good boy, isn't he?
+Your Output 
+10
+He
+is
+a
+very
+very
+good
+boy
+isn
+t
+he
