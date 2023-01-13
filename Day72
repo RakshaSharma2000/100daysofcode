@@ -1,9 +1,9 @@
 QUESTION OF THE DAY:
 Java Primality Test
 DESCRIPTION:
-A prime number is a natural number greater than  whose only positive divisors are  and itself.
-For example, the first six prime numbers are , , , , , and .
-Given a large integer, , use the Java BigInteger class' isProbablePrime method to determine and print whether it's prime or not prime.
+A prime number is a natural number greater than  whose only positive divisors are 1 and itself.
+For example, the first six prime numbers are 2,3 ,5,7 ,11 ,13 
+Given a large integer 1, use the Java BigInteger class' isProbablePrime method to determine and print whether it's prime or not prime.
 CODE SOLUTION:
 import java.io.*;
 import java.math.*;
