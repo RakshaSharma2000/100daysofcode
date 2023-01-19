@@ -1,0 +1,33 @@
+QUESTION OF THE DAY:
+Java Singleton Pattern
+DESCRIPTION:
+In object-oriented programming, a singleton class is a class that can have only one object (an instance of the class) at a time.
+After the first time, if we try to instantiate the Singleton class, the new variable also points to the first instance created. 
+So whatever modifications we do to any variable inside the class through any instance, affects the variable of the single instance created and is visible
+if we access that variable through any variable of that class type defined. 
+CODE SOLUTION:
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.lang.reflect.*;
+class Singleton{
+static Singleton instance = new Singleton();
+ private Singleton() {
+ }
+    
+    public String str;
+    
+    static Singleton getSingleInstance() {
+        return instance;
+    }
+    }
+TEST CASES:
+Sample Input
+
+hello world
+Sample Output
+
+Hello I am a singleton! Let me say hello world to you
+
