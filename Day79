@@ -1,0 +1,37 @@
+QUESTION OF THE DAY:
+Java Method Overriding 2(Super Key)
+DESCRIPTION:
+When a method in a subclass overrides a method in superclass, it is still possible to call the overridden method using super keyword.
+CODE SOLUTION:
+import java.util.*;
+import java.io.*;
+
+class BiCycle{
+	String define_me(){
+		return "a vehicle with pedals.";
+	}
+}
+
+class MotorCycle extends BiCycle{
+	String define_me(){
+		return "a cycle with an engine.";
+	}
+	
+	MotorCycle(){
+		System.out.println("Hello I am a motorcycle, I am "+ define_me());
+
+		String temp=super.define_me(); //Fix this line
+
+		System.out.println("My ancestor is a cycle who is "+ temp );
+	}
+	
+}
+class Solution{
+	public static void main(String []args){
+		MotorCycle M=new MotorCycle();
+	}
+}
+OUTPUT:
+Hello I am a motorcycle, I am a cycle with an engine.
+My ancestor is a cycle who is a vehicle with pedals.
+
