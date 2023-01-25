@@ -1,0 +1,58 @@
+QUESTION OF THE DAY:
+Java Stack
+DESCRIPTION:
+Java Collection framework provides a Stack class that models and implements a Stack data structure. 
+The class is based on the basic principle of last-in-first-out. In addition to the basic push and pop operations, 
+the class provides three more functions of empty, search, and peek. 
+The class can also be said to extend Vector and treats the class as a stack with the five mentioned functions.
+The class can also be referred to as the subclass of Vector.
+CODE SOLUTION:
+import java.util.*;
+class Solution{
+		public static boolean isBalanced(String s) {
+        Stack<Character> stack = new Stack<Character>();
+        for (int i=0; i<s.length();++i){
+            if (s.charAt(i) == '(') stack.push('(');
+            else if (s.charAt(i) == '{') stack.push('{');
+            else if (s.charAt(i) == '[') stack.push('[');
+            else if (s.charAt(i) == ')') {
+                if (stack.isEmpty()) return false;
+                if (stack.pop() != '(') return false;
+            }
+            else if (s.charAt(i) == '}') {
+                if (stack.isEmpty()) return false;
+                if (stack.pop() != '{') return false;
+            }
+            else if (s.charAt(i) == ']') {
+                if (stack.isEmpty()) return false;
+                if (stack.pop() != '[') return false;
+            }
+        }
+        return stack.isEmpty();
+    }
+    
+    public static void main(String[] args) {
+        Stack<Character> stack = new Stack<Character>();
+        Scanner sc = new Scanner(System.in);
+        String line;
+        while (sc.hasNextLine()){
+            line = sc.nextLine();
+            if (isBalanced(line)) System.out.println("true");
+            else System.out.println("false");
+        }
+    }
+}
+TEST CASE:
+Sample Input
+
+{}()
+({()})
+{}(
+[]
+Sample Output
+
+true
+true
+false
+true
+
