@@ -1,0 +1,43 @@
+QUESTION OF THE DAY:
+Climbing the Leaderboard
+DESCRIPTION:
+An arcade game player wants to climb to the top of the leaderboard and track their ranking. The game uses Dense Ranking, so its leaderboard works like this:
+
+The player with the highest score is ranked number 1 on the leaderboard.
+Players who have equal scores receive the same ranking number, and the next player(s) receive the immediately following ranking number.
+CODE SOLUTION:
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        Stack<Integer> scores = new Stack<>();
+        scores.push(in.nextInt());
+        for (int i = 1; i < n; i++) {
+            int cur = in.nextInt();
+            if (!scores.peek().equals(cur)) scores.push(cur);
+        }
+        int m = in.nextInt();
+        for (int i = 0; i < m; i++) {
+            int cur = in.nextInt();
+            while (scores.size() > 0 && cur > scores.peek()) scores.pop();
+            System.out.println(scores.size() +(scores.size() > 0 && scores.peek().equals(cur) ? 0 : 1));
+        }
+    }
+}
+Input
+7
+100 100 50 40 40 20 10
+4
+5 25 50 120
+Output
+6
+4
+2
+1
